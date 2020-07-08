@@ -1,0 +1,98 @@
+{{!-- {{> header }}
+
+<!-- Look for donation (Create recipe) -->
+    <div style="margin: 0 auto; margin-bottom:7%; margin-top:7%;" class="modal-content col-lg-6">
+        <div class="modal-header info-color white-text">
+            <h4 class="title">
+                <i class="fa fa-pencil-alt"></i> Look for a donation</h4>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="#/recipe/create">
+                <label for="defaultFormNameModalEx">Your recipe</label>
+                <input name="recipe" type="text" id="defaultFormNameModalEx" class="form-control form-control-sm"
+                    placeholder="Collage...">
+                <br>
+                <label for="defaultFormEmailModalEx">Your recipe picture...</label>
+                <input name="pictureUrl" type="text" id="defaultFormEmailModalEx" class="form-control form-control-sm"
+                    placeholder="https://...">
+                <br>
+                <label for="defaultFormSubjectModalEx">Your needed funds...</label>
+                <input name="neededFunds" type="text" id="defaultFormSubjectModalEx"
+                    class="form-control form-control-sm" placeholder="2400.00">
+                <br>
+                <label for="defaultFormMessageModalEx">Your recipe description...</label>
+                <textarea name="description" style="resize: none; height: 150px;" type="text"
+                    id="defaultFormMessageModalEx" class="md-textarea form-control"
+                    placeholder="I'm looking for funds berecipe..."></textarea>
+                <div class="text-center mt-4 mb-2">
+                    <button type="submit" class="btn btn-info">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ./Look for donation (Create recipe) -->
+
+    {{> footer }} --}}
+
+{{!-- {{> header }}
+<form class="create-recipe" action="#/recipe/create" method="post">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Wish for a new adventure!</h1>
+      <p>Fill up the following information!</p>
+    </div>
+
+    <div class="form-label-group">
+      <input  type="text" name="location" class="form-control" placeholder="Location" required="" autofocus="">
+      <label for="inputrecipeName">Location</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text"  name="dateTime" class="form-control" placeholder="Date" required="">
+      <label for="inputrecipeDate">Date</label>
+    </div>
+
+    <div class="form-label-group">
+      <textarea type="text"  name="description" class="form-control" placeholder="Description" required=""></textarea>
+      <label for="inputrecipeDescription">Description</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text"  name="imageURL" class="form-control" placeholder="Image" required="" autofocus="">
+      <label for="inputrecipeImage">Image</label>
+    </div>
+
+    <button class="btn btn-lg btn-dark btn-block" type="submit">Make a wish =)</button>
+  </form>
+{{> footer }} --}}
+
+
+{{> header }}
+<form class="text-center p-5 form-layout" action="#/recipe/create" method="POST" id="share-receipt-form">
+  <p class="h4 mb-4">Share Recipe</p>
+
+  <input type="text" id="defaultRecepieShareMeal" name="meal" class="form-control mb-4" placeholder="Meal">
+
+  <input type="text" id="defaultRecepieShareIngredients" name="ingredients" class="form-control mb-4"
+    placeholder="Ingredients">
+
+  <textarea type="text" id="defaultRecepieShareMethodOfPreparation" name="prepMethod" class="form-control mb-4"
+    placeholder="Method of preparation"></textarea>
+
+  <textarea type="text" id="defaultRecepieShareDescription" name="description" class="form-control mb-4"
+    placeholder="Description"></textarea>
+
+  <input type="text" id="defaultRecepieShareFoodImageURL" name="foodImageURL" class="form-control mb-4"
+    placeholder="Food Image URL...">
+
+  <select name="category">
+    <option selected>Select category...</option>
+    <option selected>Vegetables and legumes/beans</option>
+    <option selected>Fruits</option>
+    <option selected>Grain Food</option>
+    <option selected>Milk, cheese, eggs and alternatives</option>
+    <option selected>Lean meats and poultry, fish and alternatives</option>
+  </select>
+
+  <button class="btn btn-danger w-25 m-auto my-4 btn-block" type="submit">Share it</button>
+</form>
+{{> footer }}

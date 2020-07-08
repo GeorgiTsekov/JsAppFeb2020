@@ -1,0 +1,90 @@
+{{!-- {{> header}}
+ 
+ <!-- Register -->
+    <div style="margin: 0 auto; margin-bottom:7%; margin-top:7%;" class="modal-content col-lg-6">
+        <div class="card-body">
+            <form method="POST" action="#/user/register">
+                <p class="h4 py-4">Register</p>
+                <hr>
+                <label for="defaultFormCardNameEx" class="grey-text font-weight-light">Your username</label>
+                <input name="username" type="text" id="defaultFormCardNameEx" class="form-control">
+                <br>
+                <label for="defaultFormCardPasswordEx" class="grey-text font-weight-light">Your password</label>
+                <input name="password" type="password" id="defaultFormCardPasswordEx" class="form-control">
+                <br>
+                <label for="defaultFormCardRePasswordEx" class="grey-text font-weight-light">Your re-password</label>
+                <input name="rePassword" type="password" id="defaultFormCardRePasswordEx" class="form-control">
+                <div class="text-center py-4 mt-3">
+                    <button class="btn btn-info" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Register-->
+
+    {{> footer}} --}}
+
+{{!-- {{> header}}
+<form action="#/user/register" method="post">
+
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+    <p>Join our family and make a wish!</p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required="" autofocus="">
+    <label for="inputEmail">Username</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputRePassword" name="rePassword" class="form-control" placeholder="Re-Password"
+      required="">
+    <label for="inputRePassword">Re-Password</label>
+  </div>
+
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Sign Up</button>
+
+  <div class="text-center mb-4">
+    <p class="alreadyUser"> Already have account? Then just
+      <a href="#/user/login">Sign-In</a>!
+    </p>
+  </div>
+
+  <p class="mt-5 mb-3 text-muted text-center">© The recipeking Zone - 2019.</p>
+
+</form>
+{{> footer}} --}}
+
+
+{{> header}}
+<form class="text-center p-5 form-layout" action="#/user/register" method="POST">
+
+  <p class="h4 mb-4">Sign up</p>
+
+  <div class="form-row mb-4">
+    <div class="col">
+
+      <input type="text" id="defaultRegisterFormFirstName" class="form-control" name="firstName"
+        placeholder="First name">
+    </div>
+    <div class="col">
+
+      <input type="text" id="defaultRegisterFormLastName" class="form-control" name="lastName" placeholder="Last name">
+    </div>
+  </div>
+
+  <input type="text" id="defaultRegisterFormUsername" class="form-control mb-4" name="username" placeholder="Username">
+  <input type="password" id="defaultRegisterFormPassword" class="form-control" name="password" placeholder="Password">
+  <hr>
+  <input type="password" id="defaultRegisterRepeatPassword" class="form-control" name="repeatPassword"
+    placeholder="Repeat Password">
+  <button class="btn btn-danger my-4 btn-block w-25 m-auto" type="submit">Sign up</button>
+
+</form>
+{{> footer}}

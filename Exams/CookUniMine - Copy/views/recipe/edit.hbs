@@ -1,0 +1,64 @@
+{{!-- {{> header}}
+<form class="create-recipe" action="#/recipe/edit/{{id}}" method="post">
+
+  <div class="form-label-group">
+    <input type="text" name="location" class="form-control" placeholder="Location" required="" autofocus=""
+      value="{{ location }}">
+    <label for="inputrecipeName">Location</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ dateTime }}" name="dateTime" class="form-control" placeholder="Date" required="">
+    <label for="inputrecipeDate">Date</label>
+  </div>
+
+  <div class="form-label-group">
+    <textarea type="text" name="description" class="form-control" placeholder="Description" required="">{{ description }}</textarea>
+    <label for="inputrecipeDescription">Description</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ imageURL }}" name="imageURL" class="form-control" placeholder="Image" required=""
+      autofocus="">
+    <label for="inputrecipeImage">Image</label>
+  </div>
+  <div style="display: none">
+    <input name="organizer" value="" />
+    <input name="likes" value="" />
+  </div>
+
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Edit the recipe</button>
+</form>
+{{> footer}} --}}
+
+
+{{> header}}
+<form class="text-center p-5 form-layout" action="#/recipe/edit/{{id}}" method="POST" id="edit-receipt-form">
+  <p class="h4 mb-4">Edit Recipe</p>
+
+  <input type="text" id="defaultRecepieEditMeal" name="meal" class="form-control mb-4" placeholder="Meal" value="{{meal}}">
+
+  <input type="text" id="defaultRecepieEditIngredients" name="ingredients" class="form-control mb-4"
+    placeholder="Ingredients" value="{{ingredients}}">
+
+  <textarea type="text" id="defaultRecepieEditMethodOfPreparation" name="prepMethod" class="form-control mb-4"
+    placeholder="Method of preparation">{{prepMethod}}</textarea>
+
+  <textarea type="text" id="defaultRecepieEditDescription" name="description" class="form-control mb-4"
+    placeholder="Description">{{description}}</textarea>
+
+  <input type="text" id="defaultRecepieEditFoodImageURL" name="foodImageURL" class="form-control mb-4"
+    placeholder="Food Image URL..." value="{{foodImageURL}}">
+
+  <select name="category" select="{{category}}">
+    <option>{{category}}</option>
+    <option>Vegetables and legumes/beans</option>
+    <option>Fruits</option>
+    <option>Grain Food</option>
+    <option>Milk, cheese, eggs and alternatives</option>
+    <option>Lean meats and poultry, fish and alternatives</option>
+  </select>
+  <button class="btn btn-danger w-25 m-auto my-4 btn-block" type="submit">Edit it</button>
+
+</form>
+{{> footer}}

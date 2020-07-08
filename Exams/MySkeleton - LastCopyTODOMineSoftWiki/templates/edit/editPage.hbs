@@ -1,0 +1,55 @@
+    {{!-- <form class="create-trek" action="#/edit" method="post">
+
+    <div class="form-label-group">
+      <input type="text"  name="location" class="form-control" placeholder="Location" required="" autofocus="" value = "">
+      <label for="inputTrekName">Location</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text"  value = "" name="dateTime" class="form-control" placeholder="Date" required="">
+      <label for="inputTrekDate">Date</label>
+    </div>
+
+    <div class="form-label-group">
+      <textarea type="text"  name="description" class="form-control" placeholder="Description" required="" ></textarea>
+      <label for="inputTrekDescription">Description</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" value = "" name="imageURL" class="form-control" placeholder="Image" required="" autofocus="">
+      <label for="inputTrekImage">Image</label>
+    </div>
+
+    <button class="btn btn-lg btn-dark btn-block" type="submit">Edit the trek</button>
+  </form> --}}
+
+    {{> header}}
+
+<div class="container">
+
+        <form action="#/edit/{{articleId}}" method="post">
+            <fieldset>
+                <legend>Edit article</legend>
+                <p class="field title">
+                    <input type="text" name="title" id="title" value = "{{title}}" placeholder="Arrays">
+                    <label for="title">Title:</label>
+                </p>
+
+                <p class="field category">
+                    <input type="text" name="category" id="category" value = "{{category}}" placeholder="JavaScript">
+                    <label for="category">Category:</label>
+                </p>
+                <p class="field content">
+                    <textarea name="content" id="content">{{content}}</textarea>
+                    <label for="content">Content:</label>
+                </p>
+
+                <p class="field submit">
+                    <button class="btn submit" type="submit">Edit</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+{{> footer}}

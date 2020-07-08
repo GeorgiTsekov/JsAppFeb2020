@@ -1,0 +1,70 @@
+{{!-- {{> header}}
+
+<form class="create-post" action="#/post/edit/{{id}}" method="post">
+
+  <div class="form-label-group">
+    <input type="text" name="location" class="form-control" placeholder="Location" required="" autofocus=""
+      value="{{ location }}">
+    <label for="inputpostName">Location</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ dateTime }}" name="dateTime" class="form-control" placeholder="Date" required="">
+    <label for="inputpostDate">Date</label>
+  </div>
+
+  <div class="form-label-group">
+    <textarea type="text" name="description" class="form-control" placeholder="Description" required="">{{ description }}</textarea>
+    <label for="inputpostDescription">Description</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ imageURL }}" name="imageURL" class="form-control" placeholder="Image" required=""
+      autofocus="">
+    <label for="inputpostImage">Image</label>
+  </div>
+  <div style="display: none">
+    <input name="organizer" value="" />
+    <input name="likes" value="" />
+  </div>
+
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Edit the post</button>
+</form>
+
+{{> footer}} --}}
+
+
+{{> header}}
+<main id="home-logged">
+  <section class="first-section">
+    <section class="background-container">
+      <form action="#/post/edit/{{id}}" method="post" class="edit-form">
+        <h1>Edit Post</h1>
+        <label for="title">Title</label>
+        <input type="text" name="title" value="{{title}}">
+        <label for="category">Category</label>
+        <input type="text" name="category" value="{{category}}">
+        <label for="content">Content</label>
+        <textarea name="content" cols="30" rows="7">{{content}}</textarea>
+        <button>Edit</button>
+        <a href="#/post/create" id="close-btn"><img src="/images/close.png"></a>
+      </form>
+    </section>
+  </section>
+  <section class="second-section">
+    <h3>Posts</h3>
+    <hr>
+    <div class="posts-row">
+      {{#each posts}}
+      <article class="post">
+        <h1>{{ title }}</h1>
+        <h2><span>{{ category }}</span></h2>
+        <p>{{ content }}</p>
+        <a href="#/post/close/{{id}}" id="delete-button">Delete</a>
+        <a href="#/post/details/{{id}}" id="details-button">Details</a>
+        <a href="#/post/edit/{{id}}" id="edit-button">Edit</a>
+      </article>
+      {{/each}}
+    </div>
+  </section>
+</main>

@@ -1,0 +1,1 @@
+Dont' forget to run "npm install", betrek this app depending on bootstrap and jquery!
