@@ -1,0 +1,53 @@
+{{!-- {{> header}}
+
+<form class="create-movie" action="#/movie/edit/{{id}}" method="post">
+
+  <div class="form-label-group">
+    <input type="text" name="location" class="form-control" placeholder="Location" required="" autofocus=""
+      value="{{ location }}">
+    <label for="inputmovieName">Location</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ dateTime }}" name="dateTime" class="form-control" placeholder="Date" required="">
+    <label for="inputmovieDate">Date</label>
+  </div>
+
+  <div class="form-label-group">
+    <textarea type="text" name="description" class="form-control" placeholder="Description" required="">{{ description }}</textarea>
+    <label for="inputmovieDescription">Description</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ imageURL }}" name="imageURL" class="form-control" placeholder="Image" required=""
+      autofocus="">
+    <label for="inputmovieImage">Image</label>
+  </div>
+  <div style="display: none">
+    <input name="organizer" value="" />
+    <input name="likes" value="" />
+  </div>
+
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Edit the movie</button>
+</form>
+
+{{> footer}} --}}
+
+{{> header}}
+<form class="text-center border border-light p-5" action="#/movie/edit/{{id}}" method="post">
+  <h1>Edit Movie</h1>
+  <div class="form-group">
+    <label for="title">Movie Title</label>
+    <input type="text" class="form-control" placeholder="Movie Title" value="{{title}}" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Movie Description</label>
+    <textarea class="form-control" placeholder="Movie Description..." name="description">{{description}}</textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image url</label>
+    <input type="text" class="form-control" placeholder="Image Url" value="{{imageUrl}}" name="imageUrl">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{> footer}}

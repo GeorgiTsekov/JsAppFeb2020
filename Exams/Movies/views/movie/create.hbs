@@ -1,0 +1,87 @@
+{{!-- {{> header }}
+
+<!-- Look for donation (Create movie) -->
+    <div style="margin: 0 auto; margin-bottom:7%; margin-top:7%;" class="modal-content col-lg-6">
+        <div class="modal-header info-color white-text">
+            <h4 class="title">
+                <i class="fa fa-pencil-alt"></i> Look for a donation</h4>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="#/movie/create">
+                <label for="defaultFormNameModalEx">Your movie</label>
+                <input name="movie" type="text" id="defaultFormNameModalEx" class="form-control form-control-sm"
+                    placeholder="Collage...">
+                <br>
+                <label for="defaultFormEmailModalEx">Your movie picture...</label>
+                <input name="pictureUrl" type="text" id="defaultFormEmailModalEx" class="form-control form-control-sm"
+                    placeholder="https://...">
+                <br>
+                <label for="defaultFormSubjectModalEx">Your needed funds...</label>
+                <input name="neededFunds" type="text" id="defaultFormSubjectModalEx"
+                    class="form-control form-control-sm" placeholder="2400.00">
+                <br>
+                <label for="defaultFormMessageModalEx">Your movie description...</label>
+                <textarea name="description" style="resize: none; height: 150px;" type="text"
+                    id="defaultFormMessageModalEx" class="md-textarea form-control"
+                    placeholder="I'm looking for funds bemovie..."></textarea>
+                <div class="text-center mt-4 mb-2">
+                    <button type="submit" class="btn btn-info">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ./Look for donation (Create movie) -->
+
+    {{> footer }} --}}
+
+{{!-- {{> header }}
+
+<form class="create-movie" action="#/movie/create" method="post">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Wish for a new adventure!</h1>
+      <p>Fill up the following information!</p>
+    </div>
+
+    <div class="form-label-group">
+      <input  type="text" name="location" class="form-control" placeholder="Location" required="" autofocus="">
+      <label for="inputmovieName">Location</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text"  name="dateTime" class="form-control" placeholder="Date" required="">
+      <label for="inputmovieDate">Date</label>
+    </div>
+
+    <div class="form-label-group">
+      <textarea type="text"  name="description" class="form-control" placeholder="Description" required=""></textarea>
+      <label for="inputmovieDescription">Description</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text"  name="imageURL" class="form-control" placeholder="Image" required="" autofocus="">
+      <label for="inputmovieImage">Image</label>
+    </div>
+
+    <button class="btn btn-lg btn-dark btn-block" type="submit">Make a wish =)</button>
+  </form>
+
+{{> footer }} --}}
+
+{{> header }}
+<form class="text-center border border-light p-5" action="#/movie/create" method="post">
+  <h1>Add Movie</h1>
+  <div class="form-group">
+    <label for="title">Movie Title</label>
+    <input type="text" class="form-control" placeholder="Title" name="title" value="">
+  </div>
+  <div class="form-group">
+    <label for="description">Movie Description</label>
+    <textarea class="form-control" placeholder="Description" name="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image url</label>
+    <input type="text" class="form-control" placeholder="Image Url" name="imageUrl" value="">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{> footer }}

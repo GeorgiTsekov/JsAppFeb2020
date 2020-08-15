@@ -1,0 +1,108 @@
+{{!-- {{> header }}
+
+<!-- Dashboard (All movies View) -->
+<div style="margin-top:3%; padding-top: 3%;" class="container">
+
+
+    {{#each movies}}
+    <div style="margin-bottom:25%;" class="row">
+        <div class="col-lg-12">
+            <div class="card mt-4">
+                <img style="max-width: 1200px; height: auto; border-radius:25px;" class="card-img-top img-fluid"
+                    src="{{ pictureUrl }}" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">{{ movie }}</h3>
+                    <p class="card-text">{{ description }}</p>
+                    <a href="#/movie/details/{{ id }}" class="btn btn-success">Become a donor $$$</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <h1 class="text-center">NO movieS :(</h1>
+    {{/each}}
+
+</div>
+<!-- ./Dashboard (All movies View) -->
+
+{{> footer }} --}}
+
+
+{{!-- {{> header }}
+
+<div id="movies-list">
+{{#each movies}}
+    <a href="#/movie/details/{{id}}" class="card overflow-hidden moviesPlaceholder movie-details" style="width: 18rem; height: 18rem;">
+        <div class="card-body">
+            <p class="card-text">{{ location }}</p>
+        </div>
+        <img class="card-image" src="{{ imageURL }}" alt="Card image cap">
+    </a>
+{{else}}
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="fouronefour">
+                <img class="no-found-picture" src="./images/empty.jpg" />
+            </div>
+            <div class="no-found-template">
+                <h1>
+                    There aren't any movies, yet!</h1>
+                <h2>
+                    What do you have in mind?</h2>
+                <div class="no-found-details">
+                    Be the first explorer!
+                </div>
+                <div class="actions">
+                    <a href="#/movie/create" class="btn btn-dark btn-lg">Create the first movie? </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+</div>
+
+{{> footer }} --}}
+
+{{> header}}
+<div class="jumbotron jumbotron-fluid text-light" style="background-color: #343a40;">
+    <img src="https://s.studiobinder.com/wp-content/uploads/2019/06/Best-M-Night-Shyamalan-Movies-and-Directing-Style-StudioBinder.jpg"
+        class="img-fluid" alt="Responsive image">
+    <h1 class="display-4">Movies</h1>
+    <p class="lead">Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
+</div>
+
+<h1 class="text-center">Movies</h1>
+<section>
+    <a href="#/movie/create" class="btn btn-warning ">Add Movie</a>
+    <form class="search float-right">
+        <label>Search: </label>
+        <input type="text">
+        <input type="submit" class="btn btn-info" value="Search">
+    </form>
+</section>
+
+<div class=" mt-3 ">
+    <div class="row d-flex d-wrap">
+        {{#each movies}}
+        <div class="card-deck d-flex justify-content-center">
+            <div class="card mb-4">
+                <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap" width="400">
+                <div class="card-body">
+                    <h4 class="card-title">{{title}}</h4>
+                </div>
+                <div class="card-footer">
+                    <a href="#/movie/details/{{id}}"><button type="button"
+                            class="btn btn-info">Details</button></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{> footer}}

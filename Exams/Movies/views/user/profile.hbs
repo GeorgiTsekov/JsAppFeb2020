@@ -1,0 +1,16 @@
+{{> header}}
+
+<div class="profile col-md-6 text-center col-lg">
+    <img class="profile-img" src="./images/user.png" />
+    <div class="profile-info">
+        <p>Username: <small>{{email}}</small></p> 
+        <p class="infoType">Wished {{wishedmovies}} movies =)</p>
+        {{#each movies}}
+        <p>{{this}}</p>
+        {{else}}
+        <p>No movies</p>
+        {{/each}}
+    </div>
+</div>
+
+{{> footer}}

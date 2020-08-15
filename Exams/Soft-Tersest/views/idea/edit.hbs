@@ -1,0 +1,53 @@
+{{!-- {{> header}}
+
+<form class="create-idea" action="#/idea/edit/{{id}}" method="post">
+
+  <div class="form-label-group">
+    <input type="text" name="location" class="form-control" placeholder="Location" required="" autofocus=""
+      value="{{ location }}">
+    <label for="inputideaName">Location</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ dateTime }}" name="dateTime" class="form-control" placeholder="Date" required="">
+    <label for="inputideaDate">Date</label>
+  </div>
+
+  <div class="form-label-group">
+    <textarea type="text" name="description" class="form-control" placeholder="Description" required="">{{ description }}</textarea>
+    <label for="inputideaDescription">Description</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" value="{{ imageURL }}" name="imageURL" class="form-control" placeholder="Image" required=""
+      autofocus="">
+    <label for="inputideaImage">Image</label>
+  </div>
+  <div style="display: none">
+    <input name="organizer" value="" />
+    <input name="likes" value="" />
+  </div>
+
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Edit the idea</button>
+</form>
+
+{{> footer}} --}}
+
+{{> header}}
+<form class="text-center border border-light p-5" action="#/idea/edit/{{id}}" method="post">
+  <h1>Edit idea</h1>
+  <div class="form-group">
+    <label for="title">idea Title</label>
+    <input type="text" class="form-control" placeholder="idea Title" value="{{title}}" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">idea Description</label>
+    <textarea class="form-control" placeholder="idea Description..." name="description">{{description}}</textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image url</label>
+    <input type="text" class="form-control" placeholder="Image Url" value="{{imageUrl}}" name="imageUrl">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{> footer}}
