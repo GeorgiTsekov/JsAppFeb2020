@@ -1,0 +1,35 @@
+
+
+<header>
+    <nav>
+        <ul>
+            {{#if isLoggedIn}}
+            <li>
+                <a href="#/shoe/create">Create new offer</a>
+            </li>
+            {{else}}
+            <li class="site-logo">Shoe</li>
+            {{/if}}
+            {{#if isLoggedIn}}
+            <li>
+                <a href="#/shoe/dashboard">
+                    <img src="../public/sneakers.png" alt="">
+                </a>
+            </li>
+            {{else}}
+            <li>
+                <a href="#/home">
+                    <img src="../public/sneakers.png" alt="">
+                </a>
+            </li>
+            {{/if}}
+            {{#if isLoggedIn}}
+            <li>Welcome, {{email}} |
+                <a href="#/user/logout">Logout</a>
+            </li>
+            {{else}}
+            <li class="site-logo">Shelf</li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

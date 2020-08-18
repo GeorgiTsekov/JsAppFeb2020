@@ -1,0 +1,15 @@
+
+
+{{> header}}
+<div class="shoes">
+    {{#each shoes}}
+    <div class="shoe">
+        <img src="{{imageUrl}}">
+        <h3>{{name}}</h3>
+        <a href="#/shoe/details/{{id}}">Buy it for ${{price}}</a>
+    </div>
+    {{else}}
+    <h1 class="text-center">No shoes to display. Be the first to create a new offer...</h1>
+    {{/each}}
+</div>
+{{> footer}}
